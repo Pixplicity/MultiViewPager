@@ -1,5 +1,7 @@
 <resources>
 
-    <string name="app_name">MultiViewPager</string>
+    <string name="app_name">MultiViewPager sample</string>
+
+    <string name="info_link"><![CDATA[ More open source from Pixplicity: <br/><a href="http://github.com/Pixplicity">http://github.com/Pixplicity</a> ]]></string>
 
 </resources>

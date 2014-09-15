@@ -11,11 +11,15 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true" >
 
-        <View
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="20dp"
-            android:background="#ffbf00" />
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/bg_page"
+            android:scaleType="centerInside"
+            android:src="@drawable/im_pixplicity"
+            tools:ignore="ContentDescription" />
     </FrameLayout>
 
 </RelativeLayout>

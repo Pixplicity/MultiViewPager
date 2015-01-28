@@ -5,6 +5,8 @@ The MultiViewPager is an extension of the support-v4 library's ViewPager that al
 
 ![Sample app](http://i.imgur.com/0yGMSyE.gif)
 
+## Sample
+
 Simply add the MultiViewPager into your layout:
 
     <com.pixplicity.multiviewpager.MultiViewPager
@@ -57,3 +59,7 @@ Therefore, the MultiViewPager matches `@id/vg_cover`:
         app:matchChildWidth="@+id/vg_cover" />
 
 In this way, it knows to size the pages according to the dimension of that View or ViewGroup.
+
+## License
+
+Licensed under the Eclipse license.

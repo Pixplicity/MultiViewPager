@@ -62,4 +62,4 @@ In this way, it knows to size the pages according to the dimension of that View 
 
 ## License
 
-Licensed under the Eclipse license.
+Licensed under the Apache license.

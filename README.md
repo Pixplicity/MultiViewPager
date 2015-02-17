@@ -1,5 +1,6 @@
 MultiViewPager
 ==============
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-MultiViewPager-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1489)
 
 The MultiViewPager is an extension of the support-v4 library's ViewPager that allows the pages to be wider or narrower than the ViewPager itself. It takes care of aligning the pages next to each other, and always keeping the selected page centered.
 

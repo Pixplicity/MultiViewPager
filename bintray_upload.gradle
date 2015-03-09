@@ -1,0 +1,86 @@
+group = GROUP
+version = VERSION_NAME
+description = POM_DESCRIPTION
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+bintray {
+    user = properties.hasProperty("bintray.user") ? properties.getProperty("bintray.user") : "empty"
+    key = properties.hasProperty("bintray.user") ? properties.getProperty("bintray.apikey") : "empty"
+
+    configurations = ['archives'] //When uploading configuration files
+    pkg {
+        repo = 'maven'
+        name = POM_NAME
+        desc = POM_DESCRIPTION
+        issueTrackerUrl = POM_ISSUE_URL
+        vcsUrl = POM_SCM_CONNECTION
+        licenses = ['Apache-2.0']
+        labels = ['aar', 'android', 'viewpager']
+        publicDownloadNumbers = true
+        dryRun = true //Whether to run this as dry-run, without deploying
+        publish = true //If version should be auto published after an bintray_upload
+    }
+}
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                name POM_NAME
+                url POM_URL
+                description POM_DESCRIPTION
+                licenses {
+                    license {
+                        name POM_LICENCE_NAME
+                        url POM_LICENCE_URL
+                        distribution 'repo'
+                    }
+                }
+                developers {
+                    developer {
+                        id POM_DEVELOPER_ID_0
+                        name POM_DEVELOPER_NAME_0
+                        email POM_DEVELOPER_EMAIL_0
+                    }
+                    developer {
+                        id POM_DEVELOPER_ID_1
+                        name POM_DEVELOPER_NAME_1
+                        email POM_DEVELOPER_EMAIL_1
+                    }
+                }
+                scm {
+                    connection POM_SCM_CONNECTION
+                    developerConnection POM_SCM_CONNECTION
+                    url POM_URL
+
+                }
+            }
+        }
+    }
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+task findConventions << {
+    println project.getConvention()
+}

@@ -1,0 +1,40 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.jakewharton.sdkmanager:gradle-plugin:0.12.0'
+    }
+}
+
+apply plugin: 'android-sdk-manager'
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion Integer.parseInt(COMPILE_SDK)
+    buildToolsVersion BUILD_TOOLS
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    defaultConfig {
+        applicationId GROUP+".sample"
+        minSdkVersion Integer.parseInt(MIN_SDK)
+        targetSdkVersion Integer.parseInt(COMPILE_SDK)
+        versionCode Integer.parseInt(VERSION_CODE)
+        versionName VERSION_NAME
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile project(':library')
+}

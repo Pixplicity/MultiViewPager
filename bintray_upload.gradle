@@ -7,11 +7,12 @@ properties.load(project.rootProject.file('local.properties').newDataInputStream(
 
 bintray {
     user = properties.hasProperty("bintray.user") ? properties.getProperty("bintray.user") : "empty"
-    key = properties.hasProperty("bintray.user") ? properties.getProperty("bintray.apikey") : "empty"
+    key = properties.hasProperty("bintray.apikey") ? properties.getProperty("bintray.apikey") : "empty"
 
     configurations = ['archives'] //When uploading configuration files
     pkg {
-        repo = 'maven'
+        repo = 'android'
+        userOrg = 'pixplicity'
         name = POM_NAME
         desc = POM_DESCRIPTION
         issueTrackerUrl = POM_ISSUE_URL
@@ -45,11 +46,11 @@ install {
                         name POM_DEVELOPER_NAME_0
                         email POM_DEVELOPER_EMAIL_0
                     }
-                    developer {
-                        id POM_DEVELOPER_ID_1
-                        name POM_DEVELOPER_NAME_1
-                        email POM_DEVELOPER_EMAIL_1
-                    }
+//                    developer {
+//                        id POM_DEVELOPER_ID_1
+//                        name POM_DEVELOPER_NAME_1
+//                        email POM_DEVELOPER_EMAIL_1
+//                    }
                 }
                 scm {
                     connection POM_SCM_CONNECTION

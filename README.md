@@ -61,6 +61,22 @@ Therefore, the MultiViewPager matches `@id/vg_cover`:
 
 In this way, it knows to size the pages according to the dimension of that View or ViewGroup.
 
+# Download
+Download the latest [AAR](http://search.maven.org/#search|ga|1|g:"com.pixplicity.multiviewpager") or grab via Maven:
+```XML
+<dependency>
+  <groupId>com.pixplicity.multiviewpager</groupId>
+  <artifactId>library</artifactId>
+  <version>1.0</version>
+  <type>aar</type>
+</dependency>
+```
+
+or Gradle:
+```Java
+compile 'com.pixplicity.multiviewpager:library:1.0'
+```
+
 ## License
 
 Licensed under the Apache license.

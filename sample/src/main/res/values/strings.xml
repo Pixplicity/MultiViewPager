@@ -18,5 +18,6 @@
     <string name="app_name">MultiViewPager sample</string>
 
     <string name="info_link">More open source from Pixplicity:\nhttp://github.com/Pixplicity</string>
+     <string name="page_number_1d">Page #%d</string>
 
 </resources>

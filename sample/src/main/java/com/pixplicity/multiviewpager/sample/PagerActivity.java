@@ -36,12 +36,12 @@ public class PagerActivity extends FragmentActivity {
 
             @Override
             public int getCount() {
-                return 4;
+                return 20;
             }
 
             @Override
             public Fragment getItem(int position) {
-                return new PageFragment();
+                return PageFragment.create(position);
             }
         };
         pager.setAdapter(adapter);

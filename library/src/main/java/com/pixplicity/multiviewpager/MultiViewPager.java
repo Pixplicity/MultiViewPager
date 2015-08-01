@@ -19,11 +19,13 @@ package com.pixplicity.multiviewpager;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Point;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 public class MultiViewPager extends ViewPager {
+
+    private static final String TAG = MultiViewPager.class.getSimpleName();
 
     /**
      * Maximum size.
@@ -164,6 +166,14 @@ public class MultiViewPager extends ViewPager {
      */
     public void setMaxHeight(int height) {
         mMaxHeight = height;
+    }
+
+    @Override
+    protected void onPageScrolled(int position, float offset, int offsetPixels) {
+        Log.d(TAG, "onPageScrolled: position=" + position +
+                ",  offset=" + offset +
+                ",  offsetPixels=" + offsetPixels);
+        super.onPageScrolled(position, offset, offsetPixels);
     }
 
 }

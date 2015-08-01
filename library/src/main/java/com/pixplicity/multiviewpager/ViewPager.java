@@ -2138,15 +2138,21 @@ public class ViewPager extends ViewGroup {
                     int initialVelocity = (int) VelocityTrackerCompat.getXVelocity(
                             velocityTracker, mActivePointerId);
                     mPopulatePending = true;
+
                     final int width = getClientWidth();
                     final int scrollX = getScrollX();
                     final ItemInfo ii = infoForCurrentScrollPosition();
+                    final float marginOffset = (float) mPageMargin / width;
                     final int currentPage = ii.position;
-                    final float pageOffset = (((float) scrollX / width) - ii.offset) / ii.widthFactor;
+                    final float pageOffset = (((float) scrollX / width) - ii.offset) /
+                            (ii.widthFactor + marginOffset);
+
+                    // For fling
                     final int activePointerIndex =
                             MotionEventCompat.findPointerIndex(ev, mActivePointerId);
                     final float x = MotionEventCompat.getX(ev, activePointerIndex);
                     final int totalDelta = (int) (x - mInitialMotionX);
+
                     int nextPage = determineTargetPage(currentPage, pageOffset, initialVelocity,
                             totalDelta);
                     setCurrentItemInternal(nextPage, true, true, initialVelocity);

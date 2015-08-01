@@ -78,6 +78,14 @@ or Gradle:
 compile 'com.pixplicity.multiviewpager:library:1.0'
 ```
 
-## License
+# Known issues
+
+## Dragging from penultimate page to the last jumps back to the prior in the sample app #8
+
+When many pages are displayed, there may be problems dragging to the next page, and draggin to preivous pages may be too easy. The root cause of this is an issue in ViewPager ([b.android.com #74032](https://code.google.com/p/android/issues/detail?id=74032), [b.android.com #181864](https://code.google.com/p/android/issues/detail?id=181864). If you experience this problem, please star the issues on b.android.com.
+
+As a temporary workaround, you may want to patch the ViewPager yourself. To do so, [see this changeset](https://github.com/Pixplicity/MultiViewPager/commit/b96f71f3ec518985bff8d6b969bf40c95b739eb5).
+
+# License
 
 Licensed under the Apache license.

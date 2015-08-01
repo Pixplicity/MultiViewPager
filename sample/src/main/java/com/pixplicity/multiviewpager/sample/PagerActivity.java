@@ -43,7 +43,9 @@ public class PagerActivity extends FragmentActivity {
             public Fragment getItem(int position) {
                 return PageFragment.create(position);
             }
+
         };
         pager.setAdapter(adapter);
     }
+
 }

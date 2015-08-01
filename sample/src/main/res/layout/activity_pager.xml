@@ -13,13 +13,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="${relativePackage}.${activityClass}" >
+    tools:context="${relativePackage}.${activityClass}">
 
     <com.pixplicity.multiviewpager.MultiViewPager
         android:id="@+id/pager"
@@ -27,7 +28,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         android:layout_weight="1"
-        app:matchChildWidth="@+id/vg_cover" />
+        app:matchChildWidth="@+id/vg_cover"/>
 
     <TextView
         android:id="@+id/tv_info"
@@ -35,6 +36,6 @@
         android:layout_height="wrap_content"
         android:autoLink="web"
         android:padding="8dp"
-        android:text="@string/info_link" />
+        android:text="@string/info_link"/>
 
 </LinearLayout>

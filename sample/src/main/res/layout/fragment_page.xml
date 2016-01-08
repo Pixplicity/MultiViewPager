@@ -19,7 +19,7 @@
     android:layout_height="match_parent"
     tools:context="${relativePackage}.${activityClass}">
 
-    <FrameLayout
+    <RelativeLayout
         android:id="@+id/vg_cover"
         android:layout_width="200dp"
         android:layout_height="match_parent"
@@ -32,12 +32,26 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:drawableTop="@drawable/im_pixplicity"
             android:gravity="center"
             android:padding="24dp"
-            tools:ignore="ContentDescription"
             tools:text="Page ##"/>
 
-    </FrameLayout>
+        <View
+            android:id="@+id/v_center"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_above="@+id/v_center"
+            android:layout_alignParentTop="true"
+            android:padding="24dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/im_pixplicity"
+            tools:ignore="ContentDescription"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>

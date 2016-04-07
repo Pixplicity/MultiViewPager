@@ -7,7 +7,7 @@ The MultiViewPager is an extension of the support-v4 library's ViewPager that al
 
 ![Sample app](http://i.imgur.com/0yGMSyE.gif)
 
-## Sample
+# Sample
 
 Simply add the MultiViewPager into your layout:
 
@@ -74,6 +74,6 @@ or Gradle:
 compile 'com.pixplicity.multiviewpager:library:1.0'
 ```
 
-## License
+# License
 
 Licensed under the Apache license.

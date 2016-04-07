@@ -14,9 +14,7 @@ Simply add the MultiViewPager into your layout:
     <com.pixplicity.multiviewpager.MultiViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
         app:matchChildWidth="@+id/child_view_to_match" />
 
 Be sure to declare the `app` namespace:  
@@ -40,24 +38,22 @@ Take note of the custom attribute `matchChildWidth`. This attribute should match
 	        <ImageView
 	            android:layout_width="match_parent"
 	            android:layout_height="match_parent"
-	            android:layout_marginLeft="16dp"
-	            android:layout_marginRight="16dp"
+	            android:padding="16dp"
 	            android:background="@drawable/bg_page"
 	            android:scaleType="centerInside"
 	            android:src="@drawable/im_pixplicity"
 	            tools:ignore="ContentDescription" />
+	            
 	    </FrameLayout>
 	
 	</RelativeLayout>
-	
-Therefore, the MultiViewPager matches `@id/vg_cover`:
+
+The child view with ID `@id/vg_cover` will determine the width of the page. In this example, the width would be 200dp. In order to get this hooked up, we provide MultiViewPager with the reference to the child, `@id/vg_cover`:
 
     <com.pixplicity.multiviewpager.MultiViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
         app:matchChildWidth="@+id/vg_cover" />
 
 In this way, it knows to size the pages according to the dimension of that View or ViewGroup.

@@ -7,7 +7,7 @@ The MultiViewPager is an extension of the support-v4 library's ViewPager that al
 
 ![Sample app](http://i.imgur.com/0yGMSyE.gif)
 
-# Sample
+## Sample
 
 Simply add the MultiViewPager into your layout:
 
@@ -58,7 +58,8 @@ The child view with ID `@id/vg_cover` will determine the width of the page. In t
 
 In this way, it knows to size the pages according to the dimension of that View or ViewGroup.
 
-# Download
+## Download
+
 Download the latest [AAR](http://search.maven.org/#search|ga|1|g:"com.pixplicity.multiviewpager") or grab via Maven:
 ```XML
 <dependency>
@@ -74,6 +75,6 @@ or Gradle:
 compile 'com.pixplicity.multiviewpager:library:1.0'
 ```
 
-# License
+## License
 
 Licensed under the Apache license.

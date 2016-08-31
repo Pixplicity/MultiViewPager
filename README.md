@@ -3,6 +3,8 @@ MultiViewPager
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-MultiViewPager-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1489)
 [![Build Status](https://travis-ci.org/Pixplicity/MultiViewPager.svg?branch=master)](https://travis-ci.org/Pixplicity/MultiViewPager)
 
+*UPDATE:* This behavior is now included in the RecyclerView for support lib 24.2.0 and later. Please look at using [LinearSnapHelper](https://developer.android.com/reference/android/support/v7/widget/LinearSnapHelper.html).
+
 The MultiViewPager is an extension of the support-v4 library's ViewPager that allows the pages to be wider or narrower than the ViewPager itself. It takes care of aligning the pages next to each other, and always keeping the selected page centered.
 
 ![Sample app](http://i.imgur.com/0yGMSyE.gif)
